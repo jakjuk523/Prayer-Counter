@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #121614; 
+    background-color: #0b1411; 
     width: 100dvw;
     height: 100dvh;
     display: flex;
@@ -23,8 +23,8 @@ body {
 .button_style_plus, .button_style_minus {
     padding: 8px 16px;
     color: #ffffff;
-    background-color: #1b4d3e;
-    border: 1px solid #2d6a4f;
+    background-color: #1e5e4b;
+    border: 1px solid #348067;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
@@ -32,7 +32,7 @@ body {
 }
 
 .button_style_plus:hover, .button_style_minus:hover {
-    background-color: #2d6a4f;
+    background-color: #2a7a60;
     transform: scale(1.05);
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .soli_style {
-    border: 1px solid #2d6a4f;
+    border: 1px solid #348067;
     border-radius: 12px;
     background-color: #1a221f;
     width: 30dvw;
