@@ -13,6 +13,8 @@ const magrib_minus = document.getElementById("btn8");
 const isha_plus = document.getElementById("btn9");
 const isha_minus = document.getElementById("btn10");
 
+const delete_button = document.getElementById("btn11");
+
 
 const p_error = document.getElementById("p0");
 const p_count_fajr = document.getElementById("p1");
@@ -136,6 +138,25 @@ function isha_plus_count() {
     p_count_isha.textContent = `${isha_count} Иша`;
 }
 
+function delete_count() {
+    fajr_count = 0;
+    zuhr_count = 0;
+    asr_count = 0;
+    magrib_count = 0;
+    isha_count = 0;
+    
+    localStorage.setItem("fajr_count", isha_count);
+    localStorage.setItem("zuhr_count", isha_count);
+    localStorage.setItem("asr_count", isha_count);
+    localStorage.setItem("magrib_count", isha_count);
+    localStorage.setItem("isha_count", isha_count);
+    
+    p_count_fajr.textContent = `${fajr_count} Фаджр`;
+    p_count_zuhr.textContent = `${zuhr_count} Зухр`;
+    p_count_asr.textContent = `${asr_count} Аср`;
+    p_count_magrib.textContent = `${magrib_count} Магриб`;
+    p_count_isha.textContent = `${isha_count} Иша`;
+}
 
 fajr_minus.addEventListener("click", () => fajr_minus_count());
 fajr_plus.addEventListener("click", () => fajr_plus_count());
@@ -151,3 +172,5 @@ magrib_plus.addEventListener("click", () => magrib_plus_count());
 
 isha_minus.addEventListener("click", () => isha_minus_count());
 isha_plus.addEventListener("click", () => isha_plus_count());
+
+delete_button.addEventListener("click", () => delete_count());
