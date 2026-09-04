@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #0b1411; 
+    background-color: #0c1c16; 
     width: 100dvw;
     height: 100dvh;
     display: flex;
@@ -12,8 +12,15 @@ body {
 }
 
 .p_style {
+    margin: 0;
     color: #ff5252;
     font-size: 16px;
+}
+
+.p_update_style {
+    margin: 0 0 10px 0;
+    color: #348067;
+    font-size: 14px;
 }
 
 .button_style_minus {
@@ -41,7 +48,7 @@ body {
 }
 
 .delete_button_style {
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 10px 24px;
     color: #ffffff;
     background-color: #7a1d1d;
