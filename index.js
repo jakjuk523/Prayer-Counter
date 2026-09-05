@@ -1,3 +1,5 @@
+//ПЕРМЕННЫЕ КНОПОК ДЛЯ НАМАЗОВ
+
 const fajr_plus = document.getElementById("btn1");
 const fajr_minus = document.getElementById("btn2");
 
@@ -13,8 +15,17 @@ const magrib_minus = document.getElementById("btn8");
 const isha_plus = document.getElementById("btn9");
 const isha_minus = document.getElementById("btn10");
 
+//КНОПКА ДЛЯ СБРОСА СЧЕТА
+
 const delete_button = document.getElementById("btn11");
 
+//КОНТЕЙНЕР ДЛЯ ОЦЕНКИ САЙТА
+
+const p_grade = document.getElementById("p6");
+let input_grade = document.getElementById("npt1");
+const button_grade = document.getElementById("btn12");
+
+//ИМПОРТ ТЕКСТА
 
 const p_error = document.getElementById("p0");
 const p_count_fajr = document.getElementById("p1");
@@ -23,6 +34,7 @@ const p_count_asr = document.getElementById("p3");
 const p_count_magrib = document.getElementById("p4");
 const p_count_isha = document.getElementById("p5");
 
+//СЧЕТЧИКИ НАМАЗОВ
 
 let fajr_count = Number(localStorage.getItem("fajr_count")) || 0;
 let zuhr_count = Number(localStorage.getItem("zuhr_count")) || 0;
@@ -30,6 +42,10 @@ let asr_count = Number(localStorage.getItem("asr_count")) || 0;
 let magrib_count = Number(localStorage.getItem("magrib_count")) || 0;
 let isha_count = Number(localStorage.getItem("isha_count")) || 0;
 
+//ОСНОВНОЙ КОД
+
+
+//ПОКАЗЫВАЕМ ЗНАЧЕНИЕ ПЕРЕМЕННЫХ НА ЭКРАН
 p_count_fajr.textContent = `${fajr_count} Фаджр`;
 p_count_zuhr.textContent = `${zuhr_count} Зухр`;
 p_count_asr.textContent = `${asr_count} Аср`;
@@ -138,6 +154,8 @@ function isha_plus_count() {
     p_count_isha.textContent = `${isha_count} Иша`;
 }
 
+//КНОПКА СБРОСА СЧЕТА
+
 function delete_count() {
     fajr_count = 0;
     zuhr_count = 0;
@@ -145,10 +163,10 @@ function delete_count() {
     magrib_count = 0;
     isha_count = 0;
     
-    localStorage.setItem("fajr_count", isha_count);
-    localStorage.setItem("zuhr_count", isha_count);
-    localStorage.setItem("asr_count", isha_count);
-    localStorage.setItem("magrib_count", isha_count);
+    localStorage.setItem("fajr_count", fajr_count);
+    localStorage.setItem("zuhr_count", zuhr_count);
+    localStorage.setItem("asr_count", asr_count);
+    localStorage.setItem("magrib_count", magrib_count);
     localStorage.setItem("isha_count", isha_count);
     
     p_count_fajr.textContent = `${fajr_count} Фаджр`;
@@ -157,6 +175,40 @@ function delete_count() {
     p_count_magrib.textContent = `${magrib_count} Магриб`;
     p_count_isha.textContent = `${isha_count} Иша`;
 }
+
+//ОЦЕНКА САЙТА ПОЛЬЗОВАТЕЛЕМ 
+
+function user_grade() {
+    let user_grade_value = Number(input_grade.value);
+    
+    if (user_grade_value == "") {
+        p_grade.textContent = "Ввод пользователя не должен быть пустым !";
+        p_grade.style.color = "red";
+        p_grade.style.fontSize = "18px";
+        return;
+    }
+    
+    if (isNaN(user_grade_value)) {
+        p_grade.textContent = "Введите число !";
+        p_grade.style.color = "red";
+        p_grade.style.fontSize = "18px";
+        return;
+    }
+    
+    if (user_grade_value < 1 || user_grade_value > 10) {
+        p_grade.textContent = "Введите число от 1 до 10";
+        p_grade.style.color = "red";
+        p_grade.style.fontSize = "16px";
+        return;
+    }
+    
+    p_grade.textContent = "Спасибо за оценку 👍 !";
+    p_grade.style.color = "green";
+    p_grade.style.fontSize = "18px";
+    return;
+}
+
+//ПРИВЯЗЫВАНИЕ ФУНКЦИЙ К КНОПКАМ
 
 fajr_minus.addEventListener("click", () => fajr_minus_count());
 fajr_plus.addEventListener("click", () => fajr_plus_count());
@@ -174,3 +226,5 @@ isha_minus.addEventListener("click", () => isha_minus_count());
 isha_plus.addEventListener("click", () => isha_plus_count());
 
 delete_button.addEventListener("click", () => delete_count());
+
+button_grade.addEventListener("click", () => user_grade());
