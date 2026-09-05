@@ -24,6 +24,9 @@ const delete_button = document.getElementById("btn11");
 const open_button_grade = document.getElementById("btn13");
 const delete_messange = document.getElementById("btn14");
 
+const reset_yes = document.getElementById("btn15");
+const reset_no = document.getElementById("btn16");
+
 //КОНТЕЙНЕР ДЛЯ ОЦЕНКИ САЙТА
 
 const p_grade = document.getElementById("p6");
@@ -45,6 +48,7 @@ const p_grade_2 = document.getElementById("p7");
 const div_soli = document.getElementById("dv1");
 const div_grade = document.getElementById("dv2");
 const div_style = document.getElementById("dv3");
+const div_reset = document.getElementById("dv4");
 
 //СЧЕТЧИКИ НАМАЗОВ
 
@@ -168,7 +172,7 @@ function isha_plus_count() {
 
 //КНОПКА СБРОСА СЧЕТА
 
-function delete_count() {
+function delete_yes() {
     fajr_count = 0;
     zuhr_count = 0;
     asr_count = 0;
@@ -186,6 +190,20 @@ function delete_count() {
     p_count_asr.textContent = `${asr_count} Аср`;
     p_count_magrib.textContent = `${magrib_count} Магриб`;
     p_count_isha.textContent = `${isha_count} Иша`;
+    
+    div_soli.style.display = "flex";
+    div_reset.style.display = "none";
+}
+
+function delete_no() {
+    div_soli.style.display = "flex";
+    div_reset.style.display = "none";
+}
+
+
+function delete_count() {
+    div_soli.style.display = "none";
+    div_reset.style.display = "flex";
 }
 
 //ОЦЕНКА САЙТА ПОЛЬЗОВАТЕЛЕМ 
@@ -253,3 +271,6 @@ button_grade.addEventListener("click", () => user_grade());
 open_button_grade.addEventListener("click", () => open_window());
 
 delete_messange.addEventListener("click", () => delete_p());
+
+reset_yes.addEventListener("click", () => delete_yes());
+reset_no.addEventListener("click", () => delete_no());

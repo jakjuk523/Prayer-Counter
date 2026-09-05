@@ -10,6 +10,61 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
 
+.conf_reset {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    width: 50dvw;
+    height: 30dvh;
+    border: 1px solid #348067;
+    border-radius: 12px;
+    background-color: #1a221f;
+}
+
+.conf_reset_yes_style {
+    width: 10%;
+    height: 18%;
+    color: #ffffff;
+    background-color: #7a1d1d;
+    border: 1px solid #a83232;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.conf_reset_yes_style:hover {
+    background-color: #a83232;
+    transform: scale(1.05);
+}
+
+.conf_reset_yes_style:active {
+    transform: scale(0.95);
+}
+
+.conf_reset_no_style {
+    width: 13%;
+    height: 18%;
+    color: #ffffff;
+    background-color: #1e5e4b;
+    border: 1px solid #348067;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.conf_reset_no_style:hover {
+    background-color: #2a7a60;
+    transform: scale(1.05);
+}
+
+.conf_reset_no_style:active {
+    transform: scale(0.95);
+}
+
 .thanks_style {
     width: 40dvw;
     height: 8dvh;
@@ -17,6 +72,9 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    border: 1px solid #348067;
+    border-radius: 8px;
+    background-color: #1a221f;
     gap: 10px;
 }
 
@@ -30,6 +88,8 @@ body {
 
 .p_grade2 {
     margin: 0;
+    color: #e0e0e0;
+    font-size: 18px;
 }
 
 .button_delete_thanks_style {
@@ -52,7 +112,6 @@ body {
 .button_delete_thanks_style:active {
     transform: scale(0.95);
 }
-
 
 .buttons_style {
     display: flex;
