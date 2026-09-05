@@ -19,6 +19,11 @@ const isha_minus = document.getElementById("btn10");
 
 const delete_button = document.getElementById("btn11");
 
+//КНОПКА ДЛЯ ОЦЕНКИ САЙТА
+
+const open_button_grade = document.getElementById("btn13");
+const delete_messange = document.getElementById("btn14");
+
 //КОНТЕЙНЕР ДЛЯ ОЦЕНКИ САЙТА
 
 const p_grade = document.getElementById("p6");
@@ -33,6 +38,13 @@ const p_count_zuhr = document.getElementById("p2");
 const p_count_asr = document.getElementById("p3");
 const p_count_magrib = document.getElementById("p4");
 const p_count_isha = document.getElementById("p5");
+const p_grade_2 = document.getElementById("p7");
+
+//ИМПОРТ КОНТЕЙНЕРОВ
+
+const div_soli = document.getElementById("dv1");
+const div_grade = document.getElementById("dv2");
+const div_style = document.getElementById("dv3");
 
 //СЧЕТЧИКИ НАМАЗОВ
 
@@ -179,33 +191,43 @@ function delete_count() {
 //ОЦЕНКА САЙТА ПОЛЬЗОВАТЕЛЕМ 
 
 function user_grade() {
-    let user_grade_value = Number(input_grade.value);
-    
-    if (user_grade_value == "") {
+    if (input_grade.value.trim() === "") {
         p_grade.textContent = "Ввод пользователя не должен быть пустым !";
         p_grade.style.color = "red";
-        p_grade.style.fontSize = "18px";
         return;
     }
+    
+    let user_grade_value = Number(input_grade.value.trim());
     
     if (isNaN(user_grade_value)) {
         p_grade.textContent = "Введите число !";
         p_grade.style.color = "red";
-        p_grade.style.fontSize = "18px";
         return;
     }
     
     if (user_grade_value < 1 || user_grade_value > 10) {
         p_grade.textContent = "Введите число от 1 до 10";
         p_grade.style.color = "red";
-        p_grade.style.fontSize = "16px";
         return;
     }
     
-    p_grade.textContent = "Спасибо за оценку 👍 !";
-    p_grade.style.color = "green";
-    p_grade.style.fontSize = "18px";
-    return;
+    localStorage.setItem("user_grade_site", user_grade_value)
+    
+    div_style.style.display = "flex";
+    
+    div_grade.style.display = "none";
+    div_soli.style.display = "flex";
+}
+
+//ФУНКЦИЯ ДЛЯ ОТКРЫТИЯ ОКНА С ОЦЕНКОЙ САЙТА
+
+function open_window() {
+    div_grade.style.display = "flex";
+    div_soli.style.display = "none";
+}
+
+function delete_p() {
+    div_style.style.display = "none";
 }
 
 //ПРИВЯЗЫВАНИЕ ФУНКЦИЙ К КНОПКАМ
@@ -228,3 +250,6 @@ isha_plus.addEventListener("click", () => isha_plus_count());
 delete_button.addEventListener("click", () => delete_count());
 
 button_grade.addEventListener("click", () => user_grade());
+open_button_grade.addEventListener("click", () => open_window());
+
+delete_messange.addEventListener("click", () => delete_p());

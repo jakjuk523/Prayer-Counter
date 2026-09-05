@@ -1,61 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Счетчик намазов</title>
-        <link href="style.css" rel="stylesheet">
-        <script src="index.js" defer></script>
-    </head>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Счетчик намазов</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
     
-    <body>
+    <div class="div_solis" id="dv1">
+        <!--Обновление: 4-->
+        <div class="thanks_style" id="dv3">
+            <p class="p_grade2" id="p7">Спасибо за оценку</p>
+            <button class="button_delete_thanks_style" id="btn14">❌</button>
+        </div>
         
-        <div class="div_main_style">
-            <!--Обновление: 5-->
-            <p class="p_style" id="p0"></p>
+        <div class="buttons_style">
             <button class="delete_button_style" id="btn11">Сбросить счет</button>
-            
-            <div class="soli_style">
-                
-                <p class="soli_p_style" id="p1">0 Фаджр</p>
-                <div class="button_style">
-                    <button class="button_style_plus" id="btn1">+</button>
-                    <button class="button_style_minus" id="btn2">-</button>
-                </div>
-                
-                
-                <p class="soli_p_style" id="p2">0 Зухр</p>
-                <div class="button_style">
-                    <button class="button_style_plus" id="btn3">+</button>
-                    <button class="button_style_minus" id="btn4">-</button>
-                </div>
-                
-                
-                <p class="soli_p_style" id="p3">0 Аср</p>
-                <div class="button_style">
-                    <button class="button_style_plus" id="btn5">+</button>
-                    <button class="button_style_minus" id="btn6">-</button>
-                </div>
-                
-                
-                <p class="soli_p_style" id="p4">0 Магриб</p>
-                <div class="button_style">
-                    <button class="button_style_plus" id="btn7">+</button>
-                    <button class="button_style_minus" id="btn8">-</button>
-                </div>
-                
-                
-                <p class="soli_p_style" id="p5">0 Иша</p>
-                <div class="button_style">
-                    <button class="button_style_plus" id="btn9">+</button>
-                    <button class="button_style_minus" id="btn10">-</button>
-                </div>
+            <button class="button_grade_styles" id="btn13">Оценить сайт</button>
+        </div>
+        
+        <p class="p_style" id="p0"></p>
+    
+        <div class="soli_style">
+            <p class="soli_p_style" id="p1">0 Фаджр</p>
+            <div class="button_style">
+                <button class="button_style_plus" id="btn1">+</button>
+                <button class="button_style_minus" id="btn2">-</button>
+            </div>
+    
+            <p class="soli_p_style" id="p2">0 Зухр</p>
+            <div class="button_style">
+                <button class="button_style_plus" id="btn3">+</button>
+                <button class="button_style_minus" id="btn4">-</button>
+            </div>
+    
+            <p class="soli_p_style" id="p3">0 Аср</p>
+            <div class="button_style">
+                <button class="button_style_plus" id="btn5">+</button>
+                <button class="button_style_minus" id="btn6">-</button>
+            </div>
+
+            <p class="soli_p_style" id="p4">0 Магриб</p>
+            <div class="button_style">
+                <button class="button_style_plus" id="btn7">+</button>
+                <button class="button_style_minus" id="btn8">-</button>
+            </div>
+    
+            <p class="soli_p_style" id="p5">0 Иша</p>
+            <div class="button_style">
+                <button class="button_style_plus" id="btn9">+</button>
+                <button class="button_style_minus" id="btn10">-</button>
             </div>
         </div>
-        
-        <div class="div_grade_style">
-            <p class="p_grade_style" id="p6">Оцените сайт</p>
-            <input class="input_grade_style" id="npt1" placeholder="Введите число от 1 до 10">
-            <button class="button_grade_style" id="btn12">ГОТОВО</button>
-        </div>
-    </body>
+    </div>
+
+    <div class="div_grade_style" id="dv2">
+        <p class="p_grade_style" id="p6">Оцените сайт</p>
+        <input class="input_grade_style" id="npt1" placeholder="Введите число от 1 до 10">
+        <button class="button_grade_style" id="btn12">ГОТОВО</button>
+    </div>
+    
+</body>
 </html>
