@@ -10,12 +10,40 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
 
+
+.p_max_style {
+    margin: 0;
+    padding: 10px;
+    color: #e0e0e0;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.conf_reset_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    width: 80%;
+    height: 40%;
+    padding: 0;
+}
+
+.p_reset_style {
+    margin: 0;
+    color: #e0e0e0;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
 .conf_reset {
     display: none;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    gap: 50px;
+    flex-direction: column;
+    gap: 5px; 
     width: 50dvw;
     height: 30dvh;
     border: 1px solid #348067;
@@ -24,8 +52,8 @@ body {
 }
 
 .conf_reset_yes_style {
-    width: 10%;
-    height: 18%;
+    width: 13%;
+    height: 40%;
     color: #ffffff;
     background-color: #7a1d1d;
     border: 1px solid #a83232;
@@ -45,8 +73,8 @@ body {
 }
 
 .conf_reset_no_style {
-    width: 13%;
-    height: 18%;
+    width: 15%;
+    height: 39%;
     color: #ffffff;
     background-color: #1e5e4b;
     border: 1px solid #348067;
