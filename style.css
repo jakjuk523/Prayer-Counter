@@ -95,7 +95,9 @@ body {
 
 .thanks_style {
     width: 40dvw;
+    max-width: 220px;
     height: 8dvh;
+    max-height: 50px;
     display: none;
     align-items: center;
     justify-content: center;
@@ -121,13 +123,14 @@ body {
 }
 
 .button_delete_thanks_style {
-    width: 14%;
-    height: 70%;
+    text-align: center;
+    width: 17px;
+    height: 17px;
     color: #ffffff;
     background-color: #7a1d1d;
     border: 1px solid #a83232;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 7px;
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -242,7 +245,9 @@ body {
     border-radius: 12px;
     background-color: #1a221f;
     width: 30dvw;
-    padding: 15px;
+    min-width: 200px;;
+    max-width: 300px;
+    padding: 10px;
     display: grid;
     grid-template-columns: 0.8fr 0.2fr;
     row-gap: 30px;
