@@ -258,7 +258,9 @@ body {
     border-radius: 12px;
     background-color: #1a221f;
     width: 80dvw;
-    min-height: 50%;
+    max-width: 400px;
+    height: 50%;
+    max-height: 200px;
     padding: 20px;
 }
 
@@ -277,6 +279,7 @@ body {
 
 .input_grade_style {
     width: 88%;
+    max-width: 200px;
     padding: 10px;
     color: #ffffff;
     background-color: #0c1c16;
@@ -287,6 +290,7 @@ body {
 
 .button_grade_style {
     width: 60%;
+    max-width: 250px;
     padding: 10px;
     color: #ffffff;
     background-color: #1e5e4b;
